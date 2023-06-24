@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lotto</title>
+</head>
+<body>
+<p>Today's number</p>
+<span th:each="lotto: ${lottoList}">[[${lotto}]] - </span>
+<!-- 0은 있고 45는 안나오는거같누... -->
+</body>
+</html>

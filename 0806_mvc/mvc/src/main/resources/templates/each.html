@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Each</title>
+</head>
+<body>
+<h2>Item List</h2>
+<div>
+  <p>여기에 List의 각 데이터가 담긴채</p>
+  <!-- List의 데이터 갯수 만큼 반복해서 p요소 생성 -->
+</div>
+<div>
+    <!-- p 요소를 반복하고싶어 -->
+    <p th:each="item: ${listOfstrings}">Item: [[${item}]]</p>
+</div>
+<!-- Student 객체 리스트를 반복해보기 -->
+<div th:each="student: ${studentList}">
+    <h3>이름: [[${student.name}]]</h3>
+    <p>이메일: [[${student.email}]]</p>
+</div>
+</body>
+</html>

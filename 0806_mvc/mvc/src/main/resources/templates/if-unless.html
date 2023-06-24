@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If Unless</title>
+</head>
+<body>
+<!-- 로그인 되어있을 때 보여져야 하는 것 -->
+<div th:if = "${isLoggedIn}">
+  <p>You are logged in.</p>
+</div>
+<!-- 안했을때-->
+<div th:unless="${isLoggedIn}"><p>Please log in.</p></div>
+</body>
+</html>
