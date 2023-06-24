@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create</title>
+</head>
+<body>
+<h1>Create Todo</h1>
+<form action="/create" method="post">
+  <label for="todo-id">Todo: <input type="text" id="todo-id" name="content"></label>
+<br>
+  <input type="submit">
+</form>
+    <div th:if="${todoList.isEmpty()}">
+        <p>Nothing todo</p>
+    </div>
+    <div th:unless="${todoList.isEmpty()}"
+         th:each="todo: ${todoList}">
+        <input type="checkbox"> <a th:href="@{/{id}(id=${todo.id})}">[[${todo.content}]]</a>
+
+        <input type="submit" value="edit">
+        <input type="submit" value="delete">
+    </div>
+<a href="/home">Back</a>
+</body>
+</html>

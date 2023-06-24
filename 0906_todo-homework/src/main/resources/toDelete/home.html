@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+<h1>Todo List</h1>
+<form action="/home" method="post">
+<div th:if="${todoList.isEmpty()}">
+  <p>Nothing todo</p>
+</div>
+<div th:unless="${todoList.isEmpty()}"
+     th:each="todo: ${todoList}">
+    <input type="checkbox"> change it later
+    <input type="submit" value="edit">
+    <input type="submit" value="delete">
+    <!-- view later
+  <p>번호: [[${student.id}]]</p>
+  <p>이름: <a th:href="@{/{id}(id=${student.id})}">[[${student.name}]]</a></p>
+  <p>이메일: [[${student.email}]]</p>
+  -->
+</div>
+</form>
+<a href="/create-view">Create</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[[${todo.content}]] - edit</title>
+</head>
+<body>
+<h1>Edit Toto: [[${todo.id}]]. [[${todo.content}]]</h1>
+<form th:action="@{/{id}/edit(id=${todo.id})}" method="post">
+<label for="content-input">
+Todo: <input id="content-input" name="content" th:value="${todo.content}"
+</label>
+<br>
+<input type="submit">
+</form>
+</body>
+</html>
