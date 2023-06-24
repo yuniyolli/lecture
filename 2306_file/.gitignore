@@ -1,0 +1,49 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+media
+src/main/resources/static/IMG_1593.JPG
+src/main/resources/static/IMG_2205.jpeg
+src/main/resources/static/IMG_2723.JPG
+src/main/resources/static/IMG_2725.JPG
+src/main/resources/static/IMG_2726.JPG
+src/main/resources/static/IMG_3933.JPG
+src/main/resources/static/IMG_4201.JPG
+gradlew.bat
+filename.JPG
+filename.png
