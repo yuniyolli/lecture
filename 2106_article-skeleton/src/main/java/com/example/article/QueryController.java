@@ -1,6 +1,7 @@
 package com.example.article;
 
 import com.example.article.dto.ArticleDto;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,9 @@ import java.util.Map;
 
 @Slf4j
 @RestController
+@RequiredArgsConstructor
 public class QueryController {
+    private final ArticleService service;
     //GET /path?query=keyword&limit=20
     //이런 요청을 받았을 떄, 쿼리에 할당되어있는 문자열과
     //리밋에 할당된 숫자를 받아와서 확인할 수 있으면 되는거야
@@ -39,7 +42,6 @@ public class QueryController {
             @RequestParam(value = "page", defaultValue = "0")
             Integer pageNumber
     ) {
-        return null;
-    //return service.search(query, pageNumber);
+    return service.search(query, pageNumber);
     }
 }
